@@ -1,0 +1,9 @@
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/cmake-build-debug/source/min-lib/CMakeFiles/rebuild_cache.dir
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/cmake-build-debug/source/min-lib/CMakeFiles/edit_cache.dir
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/cmake-build-debug/source/min-lib/CMakeFiles/LIB.dir
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/cmake-build-debug/source/projects/wkw.banger/CMakeFiles/rebuild_cache.dir
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/cmake-build-debug/source/projects/wkw.banger/CMakeFiles/edit_cache.dir
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/cmake-build-debug/source/projects/wkw.banger/CMakeFiles/wkw.banger_test.dir
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/cmake-build-debug/source/projects/wkw.banger/CMakeFiles/wkw.banger.dir

@@ -1,0 +1,3 @@
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/projects/wkw.banger/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/projects/wkw.banger/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/projects/wkw.banger/cmake-build-debug/CMakeFiles/wkw.banger.dir

@@ -1,0 +1,13 @@
+"/Users/wwerkowicz/Library/Application Support/JetBrains/Toolbox/apps/CLion-ARM/ch-0/203.6682.181/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Users/wwerkowicz/Documents/Max 8/Packages/wkw"
+-- Updating Git Submodules
+fatal: to nie jest repozytorium gita (ani żaden z katalogów nadrzędnych): .git
+using default version : 1.0.0
+Building _____ HEAD-HASH-NOTFOUND _____
+Reading /Users/wwerkowicz/Documents/Max 8/Packages/wkw/package-info.json
+Generating Info.plist
+Generating: wkw.banger
+-- Min-Lib found
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/wwerkowicz/Documents/Max 8/Packages/wkw/cmake-build-debug
+Cannot read CMake dependency information from '/Users/wwerkowicz/Documents/Max 8/Packages/wkw/cmake-build-debug/CMakeFiles/Makefile.cmake'

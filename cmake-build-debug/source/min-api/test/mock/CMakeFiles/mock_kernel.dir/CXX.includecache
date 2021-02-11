@@ -1,0 +1,102 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock.cpp
+c74_mock.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock.h
+algorithm
+-
+chrono
+-
+condition_variable
+-
+cstdlib
+-
+cstdio
+-
+cstring
+-
+ctime
+-
+functional
+-
+iostream
+-
+mutex
+-
+ratio
+-
+set
+-
+string
+-
+thread
+-
+vector
+-
+unordered_map
+-
+c74_mock_atoms.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_atoms.h
+c74_mock_classes.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_classes.h
+c74_mock_inlets.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_inlets.h
+c74_mock_outlets.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_outlets.h
+c74_mock_kernel.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_kernel.h
+c74_mock_memory.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_memory.h
+c74_mock_misc.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_misc.h
+c74_mock_dictionary.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_dictionary.h
+c74_mock_clock.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_clock.h
+c74_mock_ui.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_ui.h
+c74_mock_msp.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_msp.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_atoms.h
+cassert
+-
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_classes.h
+c74_mock_inlets.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_inlets.h
+c74_mock_outlets.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_outlets.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_clock.h
+atomic
+-
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_dictionary.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_inlets.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_kernel.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_memory.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_misc.h
+cstdarg
+-
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_msp.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_outlets.h
+c74_mock_atoms.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_atoms.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/test/mock/c74_mock_ui.h
+

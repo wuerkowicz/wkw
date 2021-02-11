@@ -1,0 +1,514 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min.h
+c74_min_api.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_api.h
+c74_min_attribute_impl.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_attribute_impl.h
+c74_min_buffer_impl.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_buffer_impl.h
+c74_min_impl.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_impl.h
+../../min-lib/include/c74_lib.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib.h
+../../min-lib/include/c74_lib.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_api.h
+c74_max.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_max.h
+c74_ui.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_ui.h
+c74_ui_graphics.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_ui_graphics.h
+c74_msp.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_msp.h
+array
+-
+atomic
+-
+chrono
+-
+deque
+-
+fstream
+-
+iostream
+-
+list
+-
+mutex
+-
+queue
+-
+string
+-
+sstream
+-
+thread
+-
+vector
+-
+functional
+-
+unordered_map
+-
+utility
+-
+readerwriterqueue/readerwriterqueue.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/readerwriterqueue/readerwriterqueue.h
+murmur/Murmur3.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/murmur/Murmur3.h
+c74_min_string.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_string.h
+c74_min_symbol.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_symbol.h
+c74_min_atom.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_atom.h
+c74_min_dictionary.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_dictionary.h
+c74_min_limit.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_limit.h
+c74_min_notification.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_notification.h
+c74_min_patcher.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_patcher.h
+c74_min_object_components.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_object_components.h
+c74_jitter.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_jitter.h
+c74_min_flags.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_flags.h
+c74_min_time.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_time.h
+c74_min_port.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_port.h
+c74_min_threadsafety.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_threadsafety.h
+c74_min_inlet.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_inlet.h
+c74_min_outlet.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_outlet.h
+c74_min_argument.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_argument.h
+c74_min_message.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_message.h
+c74_min_attribute.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_attribute.h
+c74_min_logger.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_logger.h
+c74_min_operator_vector.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_operator_vector.h
+c74_min_operator_sample.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_operator_sample.h
+c74_min_operator_mc.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_operator_mc.h
+c74_min_operator_matrix.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_operator_matrix.h
+c74_min_operator_ui.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_operator_ui.h
+c74_min_graphics.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_graphics.h
+c74_min_event.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_event.h
+c74_min_object_wrapper.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_object_wrapper.h
+c74_min_object.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_object.h
+c74_min_timer.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_timer.h
+c74_min_queue.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_queue.h
+c74_min_buffer.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_buffer.h
+c74_min_path.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_path.h
+c74_min_texteditor.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_texteditor.h
+c74_min_dataspace.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_dataspace.h
+c74_min_doc.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_doc.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_argument.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_atom.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_attribute.h
+sstream
+-
+unordered_map
+-
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_attribute_impl.h
+c74_min_attribute.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_attribute.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_buffer.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_buffer_impl.h
+c74_min_buffer.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_buffer.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_dataspace.h
+c74_min_dataspace_gain.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_dataspace_gain.h
+c74_min_dataspace_none.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_dataspace_none.h
+c74_min_dataspace_time.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_dataspace_time.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_dataspace_gain.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_dataspace_none.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_dataspace_time.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_dictionary.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_doc.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_event.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_flags.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_graphics.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_impl.h
+c74_min_api.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_api.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_inlet.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_limit.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_logger.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_message.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_notification.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_object.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_object_components.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_object_wrapper.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_operator_matrix.h
+c74_jitter.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_jitter.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_operator_mc.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_operator_sample.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_operator_ui.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_operator_vector.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_outlet.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_patcher.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_path.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_port.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_queue.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_string.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_symbol.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_texteditor.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_threadsafety.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_time.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/c74_min_timer.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/murmur/Murmur3.h
+type_traits
+-
+iostream
+-
+cassert
+-
+cstdint
+-
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/readerwriterqueue/atomicops.h
+cerrno
+-
+cassert
+-
+type_traits
+-
+cerrno
+-
+cstdint
+-
+ctime
+-
+intrin.h
+-
+ppcintrinsics.h
+-
+atomic
+-
+atomic
+-
+utility
+-
+mach/mach.h
+-
+semaphore.h
+-
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/readerwriterqueue/readerwriterqueue.h
+atomicops.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/include/readerwriterqueue/atomicops.h
+new
+-
+type_traits
+-
+utility
+-
+cassert
+-
+stdexcept
+-
+new
+-
+cstdint
+-
+cstdlib
+-
+memory
+-
+chrono
+-
+CoreFoundation/CoreFoundation.h
+-
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_jitter.h
+c74_max.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max.h
+jit.gl.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/jit.gl.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max.h
+c74_max_platform.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_platform.h
+c74_max_preprocessor.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_preprocessor.h
+c74_max_sysmem.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_sysmem.h
+c74_max_symbol.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_symbol.h
+c74_max_atom.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_atom.h
+c74_max_systime.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_systime.h
+c74_max_path.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_path.h
+c74_max_proto.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_proto.h
+c74_max_dictionary.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_dictionary.h
+c74_max_object.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_object.h
+c74_max_dictobj.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_dictobj.h
+c74_max_time.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_time.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_atom.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_atomarray.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_dictionary.h
+c74_max_obstring.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_obstring.h
+c74_max_atomarray.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_atomarray.h
+c74_max_hashtab.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_hashtab.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_dictobj.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_hashtab.h
+c74_max_linklist.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_linklist.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_linklist.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_object.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_obstring.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_path.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_platform.h
+cassert
+-
+cmath
+-
+cstring
+-
+cstdio
+-
+cstdint
+-
+cstdlib
+-
+cfloat
+-
+algorithm
+-
+windows.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/windows.h
+libkern/OSAtomic.h
+-
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_preprocessor.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_proto.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_symbol.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_sysmem.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_systime.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max_time.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_msp.h
+c74_max.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_ui.h
+c74_max.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_max.h
+c74_ui_graphics.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_ui_graphics.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/c74_ui_graphics.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/jit.gl.h
+OpenGL/gl.h
+-
+OpenGL/glu.h
+-
+OpenGL/OpenGL.h
+-
+jit.glext.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/jit.glext.h
+windows.h
+-
+gl/gl.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/gl/gl.h
+gl/glu.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/gl/glu.h
+jit.wglext.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/jit.wglext.h
+jit.glext.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/jit.glext.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/jit.glext.h
+windows.h
+-
+stddef.h
+-
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-api/max-api/include/jit.wglext.h
+windows.h
+-
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib.h
+c74_lib_circular_storage.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_circular_storage.h
+c74_lib_interpolator.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_interpolator.h
+c74_lib_math.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_math.h
+c74_lib_easing.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_easing.h
+c74_lib_filters.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_filters.h
+c74_lib_adsr.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_adsr.h
+c74_lib_allpass.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_allpass.h
+c74_lib_dcblocker.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_dcblocker.h
+c74_lib_delay.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_delay.h
+c74_lib_generator.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_generator.h
+c74_lib_limiter.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_limiter.h
+c74_lib_onepole.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_onepole.h
+c74_lib_saturation.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_saturation.h
+c74_lib_sync.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_sync.h
+c74_lib_oscillator.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_oscillator.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_adsr.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_allpass.h
+c74_lib_delay.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_delay.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_circular_storage.h
+thread
+-
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_dcblocker.h
+c74_min_api.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_min_api.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_delay.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_easing.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_filters.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_generator.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_interpolator.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_limiter.h
+c74_min_api.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_min_api.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_math.h
+random
+-
+numeric
+-
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_onepole.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_oscillator.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_saturation.h
+c74_min_api.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_min_api.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/min-lib/include/c74_lib_sync.h
+
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/projects/wkw.banger/wkw.banger.cpp
+c74_min.h
+/Users/wwerkowicz/Documents/Max 8/Packages/wkw/source/projects/wkw.banger/c74_min.h
+
