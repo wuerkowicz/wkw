@@ -17,16 +17,18 @@ public:
     MIN_AUTHOR        {"Cycling '74"};
     MIN_RELATED        {"print, jit.print, dict.print"};
 
-    inlet<>  input    { this, "(bang) clear buffer" };
+    inlet<>  input    { this, "(bang) bang to fill" };
     outlet<> output    { this, "(bang) bang when done" };
 
 
+    //add buffer reference
     buffer_reference buffer { this,
         MIN_FUNCTION {
             return {};
         }
     };
     
+    //set buffer using the name provided
     argument<symbol> name_arg { this, "buffer-name", "Buffer name.",
         MIN_ARGUMENT_FUNCTION {
             buffer.set(arg);
@@ -34,8 +36,8 @@ public:
     };
 
 
-    // respond to the bang message to do something
-    message<> bang { this, "bang", "Empty the buffer",
+    // respond to the bang message to fill
+    message<> bang { this, "bang", "Fill the buffer with random values",
         MIN_FUNCTION {
             buffer_lock<> b {buffer};
             for (auto i = 0; i < b.frame_count(); i++) {
@@ -43,8 +45,7 @@ public:
             }
             b.dirty();
             
-            
-            output.send("bang");
+            output.send("bang"); //bang when done
             return {};
         }
     };
