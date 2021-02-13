@@ -25,11 +25,11 @@
 	</dict>
 	
 	<key>CFBundleVersion</key>
-	<string>1.0.0</string>
+	<string>0.1.</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
+	<string>0.1.</string>
 	<key>CFBundleLongVersionString</key>
-	<string>${MACOSX_BUNDLE_EXECUTABLE_NAME} 1.0.0 - Copyright (c) 2018 Cycling '74</string>
+	<string>${MACOSX_BUNDLE_EXECUTABLE_NAME} 0.1. - Copyright (c) 2018 Cycling '74</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright (c) 2018 Cycling '74</string>
 	

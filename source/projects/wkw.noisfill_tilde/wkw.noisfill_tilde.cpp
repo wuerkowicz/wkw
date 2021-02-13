@@ -12,23 +12,24 @@ using namespace c74::min;
 
 class wkw_noisfill_tilde : public object<wkw_noisfill_tilde> {
 public:
-    MIN_DESCRIPTION    {"Post to the Max Console."};
-    MIN_TAGS        {"utilities"};
+    MIN_DESCRIPTION    {"Fill buffer of given length with noise."};
+    MIN_TAGS        {"buffer, sorting"};
     MIN_AUTHOR        {"Cycling '74"};
-    MIN_RELATED        {"print, jit.print, dict.print"};
+    MIN_RELATED        {"buffer~"};
 
     inlet<>  input    { this, "(bang) bang to fill" };
     outlet<> output    { this, "(bang) bang when done" };
 
 
-    //add buffer reference
+    // add buffer reference
     buffer_reference buffer { this,
         MIN_FUNCTION {
             return {};
         }
     };
     
-    //set buffer using the name provided
+    
+    // set buffer using the name provided
     argument<symbol> name_arg { this, "buffer-name", "Buffer name.",
         MIN_ARGUMENT_FUNCTION {
             buffer.set(arg);
@@ -41,15 +42,17 @@ public:
         MIN_FUNCTION {
             buffer_lock<> b {buffer};
             for (auto i = 0; i < b.frame_count(); i++) {
-                b.lookup(i) = randDouble();
+                b.lookup(i) = randDouble(); //fill the current index with random value
             }
-            b.dirty();
-            
+            b.dirty(); //modified flag
+            b.~buffer_lock();
             output.send("bang"); //bang when done
             return {};
         }
     };
     
+    
+    // calculate a random double from the range [-1, 1]
     double randDouble() {
         std::random_device rd;
         std::mt19937 mt(rd());
@@ -57,8 +60,6 @@ public:
         return dist(mt);
     }
     
-
-
 
 };
 
