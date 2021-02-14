@@ -10,8 +10,8 @@ using namespace c74::min;
 
 class wkw_buffsort_tilde : public object<wkw_buffsort_tilde> {
 public:
-    MIN_DESCRIPTION    {"Sort buffer of given length with a ."};
-    MIN_TAGS        {"buffer, sorting"};
+    MIN_DESCRIPTION    {"Sort samples in buffer of given length using a chosen algorithm."};
+    MIN_TAGS        {"buffer, sorting algorithms"};
     MIN_AUTHOR        {"Cycling '74"};
     MIN_RELATED        {"buffer~"};
 
@@ -25,6 +25,7 @@ public:
     int sorted_flag;
     int i;
 
+    
     // add buffer reference
     buffer_reference buffer { this,
         MIN_FUNCTION {
@@ -32,14 +33,48 @@ public:
         }
     };
     
+    
+    //setup flags and the index
     message<> maxclass_setup { this, "maxclass_setup",
         MIN_FUNCTION {
-            on_flag = 0;
-            sorted_flag = 0;
-            i = 0;
+            setup();
             return {};
         }
     };
+    
+    
+    void setup() {
+        on_flag = 0;
+        sorted_flag = 0;
+        i = 0;
+    }
+    
+    //reset the above if banged
+    message<> bang { this, "bang", "Notify changes had been made.",
+        MIN_FUNCTION {
+            setup();
+            return {};
+        }
+    };
+    
+    
+    // sorting delay attribute
+    attribute<double> delay { this, "delay", 0.,
+        description {
+            "Delay of index scrolling. "
+            "Value of index will be updated with a given delay."
+        }
+    };
+    
+    
+    // set buffer using the name provided
+    argument<symbol> name_arg { this, "buffer-name", "Buffer name.",
+        MIN_ARGUMENT_FUNCTION {
+            buffer.set(arg);
+        }
+    };
+    
+
     
     timer<> metro { this,
         MIN_FUNCTION {
@@ -51,41 +86,32 @@ public:
         }
     };
     
-    
-    // set buffer using the name provided
-    argument<symbol> name_arg { this, "buffer-name", "Buffer name.",
-        MIN_ARGUMENT_FUNCTION {
-            buffer.set(arg);
-        }
-    };
-
-    // sorting delay
-    attribute<double> delay { this, "delay", 0.,
-        description {
-            "Delay of index scrolling. "
-            "Value of index will be updated with a given delay."
-        }
-    };
 
     //turn on sorting
     message<> number { this, "number",
         MIN_FUNCTION {
             if(inlet == 0) {
-            on_flag = args[0];
-            if (on_flag != 0) metro.tick();
-            else if (on_flag == 0) metro.stop();
-            } else if (inlet == 1) {
-                delay = args[0];
+                on_flag = args[0];
+                if (on_flag != 0)   metro.tick();
+                else if (on_flag == 0)  metro.stop();
             }
-            return{};
+            else if (inlet == 1) {
+                    delay = args[0];
+                }
+            else if (inlet == 2) {
+                        //not sure what's wrong here
+                        buffer_lock<false> b {buffer};
+                        b.resize_in_samples(args[0]);
+                        b.~buffer_lock();
+                    }
+            return{args[0]};
             }
         
     };
     
     
     
-    
-    //sorting algorithm
+    // actual sorting algorithm
     void bubbleSort() {
         buffer_lock<> b {buffer};
         
