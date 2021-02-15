@@ -12,17 +12,17 @@ class wkw_buffsort_tilde : public object<wkw_buffsort_tilde> {
 public:
     MIN_DESCRIPTION    {"Sort samples in buffer of given length using a chosen algorithm."};
     MIN_TAGS        {"buffer, sorting algorithms"};
-    MIN_AUTHOR        {"Cycling '74"};
+    MIN_AUTHOR        {"wuerkowicz"};
     MIN_RELATED        {"buffer~"};
 
-    inlet<>     input_on    { this, "(1/0) On/Off" };
+    inlet<>     input_on    { this, "(int) non-zero toggles sorting/(bang) restarts" };
     inlet<>     input_del   { this, "(float) delay rate" };
-    inlet<>     input_size  { this, "(int) buffer length in samps" };
     outlet<>    output      { this, "(bang) bang when done" };
     
     
     int on_flag;
     int sorted_flag;
+    bool done = false;
     int i;
 
     
@@ -38,21 +38,23 @@ public:
     message<> maxclass_setup { this, "maxclass_setup",
         MIN_FUNCTION {
             setup();
+            on_flag = 0;
             return {};
         }
     };
     
     
     void setup() {
-        on_flag = 0;
-        sorted_flag = 0;
+        done = false;
         i = 0;
     }
     
     //reset the above if banged
     message<> bang { this, "bang", "Notify changes had been made.",
         MIN_FUNCTION {
-            setup();
+            i = 0;
+            done = false;
+            metro.tick();
             return {};
         }
     };
@@ -78,9 +80,14 @@ public:
     
     timer<> metro { this,
         MIN_FUNCTION {
-            if (on_flag == 1) {
-                bubbleSort();
-                metro.delay(delay);
+            if (!done){
+                if (on_flag == 1) {
+                    bubbleSort();
+                    metro.delay(delay);
+                } else if (on_flag == 2) {
+                    selectionSort();
+                    metro.delay(delay);
+                }
             }
             return{};
         }
@@ -95,15 +102,9 @@ public:
                 if (on_flag != 0)   metro.tick();
                 else if (on_flag == 0)  metro.stop();
             }
-            else if (inlet == 1) {
+            else {
                     delay = args[0];
                 }
-            else if (inlet == 2) {
-                        //not sure what's wrong here
-                        buffer_lock<false> b {buffer};
-                        b.resize_in_samples(args[0]);
-                        b.~buffer_lock();
-                    }
             return{args[0]};
             }
         
@@ -111,10 +112,12 @@ public:
     
     
     
-    // actual sorting algorithm
+    // actual sorting algorithms
+    
+    
+    //bubble sort
     void bubbleSort() {
         buffer_lock<> b {buffer};
-        
         if (b.valid()) {
             if (b.lookup(i) > b.lookup(i+1)) {
                 auto temp = b.lookup(i);
@@ -126,18 +129,54 @@ public:
             
             if (i++ == b.frame_count()-2){
                 if (sorted_flag){
+                    done = true;
+                    metro.stop();
                     output.send("bang");
                 }
                 i = 0;
                 sorted_flag = 1;
             }
         }
-        
-        b.~buffer_lock();
     }
     
-
     
+    //selection sort
+    void selectionSort() {
+        buffer_lock<> b {buffer};
+        
+        if (b.valid()){
+            auto min = i;
+                for (auto j = min+1; j < b.frame_count(); j++) {
+                    if (b.lookup(j) < b.lookup(min)) {
+                        min = j;
+                    }
+                }
+                //swap if needed
+                if (min != i) {
+                    auto temp = b.lookup(i);
+                    b.lookup(i) = b.lookup(min);
+                    b.lookup(min) = temp;
+                    b.dirty();
+                }
+                //increment index
+                if (i < b.frame_count() - 1) {
+                    i++;
+                }
+                else {
+                    done = true;
+                    metro.stop();
+                    output.send("bang");
+                }
+            }
+    }
+    
+    //merge sort
+    void mergeSort() {
+        buffer_lock<> b {buffer};
+        if (b.valid()) {
+            
+        }
+    }
 
    
 };

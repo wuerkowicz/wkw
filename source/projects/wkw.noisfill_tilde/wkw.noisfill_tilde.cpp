@@ -14,7 +14,7 @@ class wkw_noisfill_tilde : public object<wkw_noisfill_tilde> {
 public:
     MIN_DESCRIPTION    {"Fill buffer of given length with noise."};
     MIN_TAGS        {"buffer, sorting"};
-    MIN_AUTHOR        {"Cycling '74"};
+    MIN_AUTHOR        {"wuerkowicz"};
     MIN_RELATED        {"buffer~"};
 
     inlet<>  input    { this, "(bang) bang to fill" };
@@ -45,7 +45,7 @@ public:
                 b.lookup(i) = randDouble(); //fill the current index with random value
             }
             b.dirty(); //modified flag
-            b.~buffer_lock();
+            //b.~buffer_lock();
             output.send("bang"); //bang when done
             return {};
         }

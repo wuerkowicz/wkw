@@ -12,8 +12,8 @@ class wkw_buffempt_tilde : public object<wkw_buffempt_tilde> {
 public:
     MIN_DESCRIPTION	{"Post to the Max Console."};
     MIN_TAGS		{"utilities"};
-    MIN_AUTHOR		{"Cycling '74"};
-    MIN_RELATED		{"print, jit.print, dict.print"};
+    MIN_AUTHOR		{"wuerkowicz"};
+    MIN_RELATED		{"buffer~"};
 
     inlet<>  input	{ this, "(bang) clear buffer" };
     outlet<> output	{ this, "(bang) bang when done" };
