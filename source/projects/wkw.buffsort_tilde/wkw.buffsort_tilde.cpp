@@ -19,12 +19,14 @@ public:
 
     inlet<>     input_on    { this, "(int) non-zero toggles sorting/(bang) restarts" };
     inlet<>     input_del   { this, "(float) delay rate" };
+    inlet<>     input_loop  { this, "(1/0) toggle looop" };
     outlet<>    output      { this, "(bang) bang when done" };
     
     
     int on_flag;
     int sorted_flag;
-    bool done = false;
+    int loop_flag;
+    bool done;
     int i;
     int size;
 
@@ -44,6 +46,7 @@ public:
         MIN_FUNCTION {
             setup();
             on_flag = 0;
+            loop_flag = 0;
             return {};
         }
     };
@@ -59,11 +62,14 @@ public:
     message<> bang { this, "bang", "Notify changes had been made.",
         MIN_FUNCTION {
             if (inlet == 0) {
-            setup();
-            if (on_flag !=0)
-                metro.tick();
+                setup();
+                if (on_flag != 0)
+                    metro.tick();
             } else {
                 fill();
+                setup();
+                if (on_flag != 0)
+                    metro.tick();
             }
             return {};
         }
@@ -101,8 +107,10 @@ public:
                     mergeSort();
                     metro.delay(delay);
                 }
-            } else {
-                output.send("bang");
+            } else if (done && loop_flag) {
+                fill();
+                setup();
+                metro.delay(delay);
             }
             return{};
         }
@@ -117,9 +125,16 @@ public:
                 if (on_flag != 0)   metro.tick();
                 else if (on_flag == 0)  metro.stop();
             }
-            else {
+            else if (inlet == 1) {
                     delay = args[0];
+            } else {
+                loop_flag = args[0];
+                if (done && loop_flag) {
+                    fill();
+                    setup();
+                    metro.tick();
                 }
+            }
             return{args[0]};
             }
         
@@ -239,6 +254,7 @@ public:
                 b.lookup(i) = randDouble(); //fill the current index with random value
             }
             b.dirty(); //modified flag
+            done = false;
         }
     }
     

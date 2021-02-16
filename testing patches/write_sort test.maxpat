@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 543.0, 407.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-21",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -146,7 +158,7 @@
 				"box" : 				{
 					"id" : "obj-27",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 431.5, 451.0, 101.0, 22.0 ],
@@ -398,18 +410,6 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 122.0, 339.0, 95.0, 22.0 ],
-					"text" : "wkw.noisfill~ buf"
-				}
-
-			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -436,7 +436,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-34", 0 ],
-					"midpoints" : [ 441.0, 421.0, 230.0, 421.0 ],
+					"midpoints" : [ 441.0, 369.0, 230.0, 369.0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -551,8 +551,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 60.5, 323.0, 131.5, 323.0 ],
+					"destination" : [ "obj-27", 1 ],
+					"midpoints" : [ 60.5, 394.0, 482.0, 394.0 ],
 					"order" : 0,
 					"source" : [ "obj-4", 0 ]
 				}
@@ -589,6 +589,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-27", 2 ],
+					"midpoints" : [ 552.5, 440.5, 523.0, 440.5 ],
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-34", 1 ],
 					"midpoints" : [ 147.0, 539.0, 193.75, 539.0, 193.75, 461.0, 240.5, 461.0 ],
 					"source" : [ "obj-9", 1 ]
@@ -614,10 +622,6 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "wkw.noisfill~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "wkw.buffsort~.mxo",
 				"type" : "iLaX"
 			}
