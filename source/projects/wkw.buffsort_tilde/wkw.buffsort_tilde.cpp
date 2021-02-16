@@ -4,7 +4,7 @@
 ///	@license	Use of this source code is governed by the MIT License found in the License.md file.
 
 #include "c74_min.h"
-#define Z_NO_INPLACE 1
+#include <algorithm>
 using namespace c74::min;
 
 
@@ -24,6 +24,7 @@ public:
     int sorted_flag;
     bool done = false;
     int i;
+    int size;
 
     
     
@@ -49,6 +50,7 @@ public:
     void setup() {
         done = false;
         i = 0;
+        size = 1;
     }
     
     //reset the above if banged
@@ -88,6 +90,9 @@ public:
                     metro.delay(delay);
                 } else if (on_flag == 2) {
                     selectionSort();
+                    metro.delay(delay);
+                } else if (on_flag == 3) {
+                    mergeSort();
                     metro.delay(delay);
                 }
             } else {
@@ -177,7 +182,46 @@ public:
     void mergeSort() {
         buffer_lock<> b {buffer};
         if (b.valid()) {
-            
+            int n = b.frame_count();
+            double buf[n];
+            for (int leftStart = 0; leftStart < n; leftStart += 2*size) {
+                  int left = leftStart,
+                      right = fmin((left + size), n),
+                      leftLimit = right,
+                      rightLimit = fmin((right + size), n),
+                      i = left;
+                  while (left < leftLimit && right < rightLimit) {
+                    if (b.lookup(left) <= b.lookup(right)) {
+                      buf[i++] = b.lookup(left++);
+                    } else {
+                        buf[i++] = b.lookup(right++);
+                    }
+                  }
+                  while (left < leftLimit) {
+                      buf[i++] = b.lookup(left++);
+                  }
+                  while (right < rightLimit) {
+                      buf[i++] = b.lookup(right++);
+                  }
+                }
+            double temp[n];
+            for(auto j = 0; j < n; j++) {
+                temp[j] = b.lookup(j);
+            }
+            for(auto j = 0; j < n; j++) {
+                b.lookup(j) = buf[j];
+            }
+            for(auto j = 0; j < n; j++) {
+                    buf[j] = temp[j];
+            }
+            b.dirty();
+                if (size < n) {
+                    size *= 2;
+                } else {
+                    done = true;
+                    metro.stop();
+                    output.send("bang");
+                }
         }
     }
 };

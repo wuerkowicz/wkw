@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 213.0, 214.0, 34.0, 22.0 ],
+					"text" : "sel 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-33",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -108,43 +120,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-26",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 711.0, 351.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-21",
-					"linecount" : 2,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 698.0, 450.0, 50.0, 35.0 ],
-					"text" : "\"hello world\""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 692.0, 401.0, 149.0, 22.0 ],
-					"text" : "max-auto-build.hello-world"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-29",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -206,7 +181,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-5",
-					"items" : [ "bubble", ",", "selection" ],
+					"items" : [ "bubble", ",", "selection", ",", "merge" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -310,7 +285,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 535.5, 321.0, 78.0, 22.0 ]
+					"patching_rect" : [ 513.5, 339.0, 78.0, 22.0 ]
 				}
 
 			}
@@ -461,6 +436,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-34", 0 ],
+					"midpoints" : [ 441.0, 421.0, 230.0, 421.0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -497,14 +473,33 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
+					"order" : 0,
 					"source" : [ "obj-20", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-26", 0 ]
+					"destination" : [ "obj-21", 0 ],
+					"midpoints" : [ 310.5, 307.0, 266.5, 307.0, 266.5, 203.0, 222.5, 203.0 ],
+					"order" : 1,
+					"source" : [ "obj-20", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"midpoints" : [ 222.5, 246.5, 60.5, 246.5 ],
+					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 1 ],
+					"midpoints" : [ 441.0, 483.0, 387.25, 483.0, 387.25, 310.0, 333.5, 310.0 ],
+					"source" : [ "obj-27", 0 ]
 				}
 
 			}
@@ -549,6 +544,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-27", 0 ],
+					"midpoints" : [ 230.0, 504.0, 335.5, 504.0, 335.5, 440.0, 441.0, 440.0 ],
 					"source" : [ "obj-34", 0 ]
 				}
 
@@ -593,14 +589,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-21", 1 ],
-					"source" : [ "obj-8", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-34", 1 ],
+					"midpoints" : [ 147.0, 539.0, 193.75, 539.0, 193.75, 461.0, 240.5, 461.0 ],
 					"source" : [ "obj-9", 1 ]
 				}
 
@@ -608,6 +598,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-34", 0 ],
+					"midpoints" : [ 136.5, 539.0, 183.25, 539.0, 183.25, 461.0, 230.0, 461.0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
@@ -628,10 +619,6 @@
 			}
 , 			{
 				"name" : "wkw.buffsort~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "max-auto-build.hello-world.mxo",
 				"type" : "iLaX"
 			}
  ],
