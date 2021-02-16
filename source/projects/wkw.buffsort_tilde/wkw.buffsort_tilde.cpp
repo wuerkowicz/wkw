@@ -55,7 +55,8 @@ public:
     message<> bang { this, "bang", "Notify changes had been made.",
         MIN_FUNCTION {
             setup();
-            metro.tick();
+            if (on_flag !=0)
+                metro.tick();
             return {};
         }
     };
@@ -89,6 +90,8 @@ public:
                     selectionSort();
                     metro.delay(delay);
                 }
+            } else {
+                output.send("bang");
             }
             return{};
         }
@@ -150,7 +153,6 @@ public:
                     if (b.lookup(j) < b.lookup(min)) {
                         min = j;
                     }
-                    output.send(j);
                 }
                 //swap if needed
                 if (min != i) {
@@ -166,7 +168,7 @@ public:
                 else {
                     done = true;
                     metro.stop();
-                    //output.send("bang");
+                    output.send("bang");
                 }
             }
     }
