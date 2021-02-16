@@ -4,7 +4,7 @@
 ///	@license	Use of this source code is governed by the MIT License found in the License.md file.
 
 #include "c74_min.h"
-
+#define Z_NO_INPLACE 1
 using namespace c74::min;
 
 
