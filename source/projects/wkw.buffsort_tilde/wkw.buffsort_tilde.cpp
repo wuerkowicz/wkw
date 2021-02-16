@@ -26,6 +26,8 @@ public:
     int i;
 
     
+    
+    
     // add buffer reference
     buffer_reference buffer { this,
         MIN_FUNCTION {
@@ -52,8 +54,7 @@ public:
     //reset the above if banged
     message<> bang { this, "bang", "Notify changes had been made.",
         MIN_FUNCTION {
-            i = 0;
-            done = false;
+            setup();
             metro.tick();
             return {};
         }
@@ -143,13 +144,13 @@ public:
     //selection sort
     void selectionSort() {
         buffer_lock<> b {buffer};
-        
+        auto min = i;
         if (b.valid()){
-            auto min = i;
                 for (auto j = min+1; j < b.frame_count(); j++) {
                     if (b.lookup(j) < b.lookup(min)) {
                         min = j;
                     }
+                    output.send(j);
                 }
                 //swap if needed
                 if (min != i) {
@@ -165,7 +166,7 @@ public:
                 else {
                     done = true;
                     metro.stop();
-                    output.send("bang");
+                    //output.send("bang");
                 }
             }
     }
@@ -177,8 +178,6 @@ public:
             
         }
     }
-
-   
 };
 
 
