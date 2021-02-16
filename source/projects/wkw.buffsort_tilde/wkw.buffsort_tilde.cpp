@@ -5,6 +5,8 @@
 
 #include "c74_min.h"
 #include <algorithm>
+#include <random>
+#include <cfloat>
 using namespace c74::min;
 
 
@@ -56,9 +58,13 @@ public:
     //reset the above if banged
     message<> bang { this, "bang", "Notify changes had been made.",
         MIN_FUNCTION {
+            if (inlet == 0) {
             setup();
             if (on_flag !=0)
                 metro.tick();
+            } else {
+                fill();
+            }
             return {};
         }
     };
@@ -223,6 +229,26 @@ public:
                     output.send("bang");
                 }
         }
+    }
+    
+
+    void fill() {
+        buffer_lock<> b {buffer};
+        if (b.valid()) {
+            for (auto i = 0; i < b.frame_count(); i++) {
+                b.lookup(i) = randDouble(); //fill the current index with random value
+            }
+            b.dirty(); //modified flag
+        }
+    }
+    
+    
+    // calculate a random double from the range [-1, 1]
+    double randDouble() {
+        std::random_device rd;
+        std::mt19937 mt(rd());
+        std::uniform_real_distribution<double> dist(-1., std::nextafter(1., DBL_MAX));
+        return dist(mt);
     }
 };
 
